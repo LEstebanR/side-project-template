@@ -17,7 +17,6 @@ export default function Home() {
           <Chip color="warning">Warning</Chip>
           <Chip color="danger">Danger</Chip>
         </div>
-        <Subtitle color="secondary">Initial Pages:</Subtitle>
       </div>
     </main>
   );
