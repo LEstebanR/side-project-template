@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import { Footer } from "@/components/UI/Footer";
 import { Header } from "@/components/UI/Header";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
-        <Header />
-        <NextUIProvider>{children}</NextUIProvider>
-        <Footer />
+        <ThemeProvider attribute="class">
+          <NextUIProvider>
+            <Header />
+            <main className="flex flex-col flex-1">{children}</main>
+            <Footer />
+          </NextUIProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

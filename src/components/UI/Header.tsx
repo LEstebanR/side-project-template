@@ -11,9 +11,12 @@ import {
   DropdownSection,
   DropdownItem,
   DropdownMenu,
+  Switch,
 } from "@nextui-org/react";
 import Logo from "./Logo";
 import { MdDensityMedium } from "react-icons/md";
+import { GoSun, GoMoon } from "react-icons/go";
+import { useTheme } from "next-themes";
 
 const options = [
   { label: "Features", value: "option-1" },
@@ -22,6 +25,9 @@ const options = [
 ];
 
 export function Header(): React.ReactElement {
+  const { systemTheme, theme, setTheme } = useTheme();
+  console.log(systemTheme);
+
   return (
     <Navbar className="bg-light dark:bg-dark flex items-center">
       <NavbarBrand>
@@ -40,6 +46,21 @@ export function Header(): React.ReactElement {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <Switch
+            defaultSelected={systemTheme === "dark"}
+            size="lg"
+            color="secondary"
+            onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+            thumbIcon={({ isSelected, className }) =>
+              isSelected ? (
+                <GoSun className={className} />
+              ) : (
+                <GoMoon className={className} />
+              )
+            }
+          ></Switch>
+        </NavbarItem>
         <NavbarItem className="hidden sm:flex">
           <Button as={Link} color="primary" href="#" variant="bordered">
             Login

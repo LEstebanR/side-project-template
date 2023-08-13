@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Logo(): React.ReactElement {
-  return <p>Logo</p>;
+  return <p className="text-black dark:text-white">Logo</p>;
 }
