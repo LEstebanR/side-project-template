@@ -30,8 +30,8 @@ const config: Config = {
         complete: "0 0 10px rgba(0, 0, 0, 0.1)",
       },
     },
-    darkMode: "class",
   },
   plugins: [nextui()],
+  darkMode: "class",
 };
 export default config;
