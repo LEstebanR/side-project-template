@@ -5,7 +5,7 @@ import { Chip } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24 bg-light dark:bg-dark ">
+    <main className="flex flex-col items-center justify-between p-4 md:p-24 bg-light dark:bg-dark ">
       <div className="p-2 w-full rounded-xl flex flex-col items-center justify-center py-8 shadow-secondary shadow-complete gap-6">
         <Title gradient>Side Projects</Title>
         <Body>This is a template to create Next.js apps.</Body>

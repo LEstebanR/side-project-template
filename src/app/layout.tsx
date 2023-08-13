@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import Header from "@/components/UI/Header";
+import { Footer } from "@/components/UI/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen`}>
         <Header />
         <NextUIProvider>{children}</NextUIProvider>
+        <Footer />
       </body>
     </html>
   );

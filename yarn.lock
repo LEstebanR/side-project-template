@@ -599,7 +599,7 @@
     "@nextui-org/react-rsc-utils" "2.0.5"
     "@nextui-org/shared-utils" "2.0.2"
 
-"@nextui-org/react@^2.0.15":
+"@nextui-org/react@2.0.15":
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/@nextui-org/react/-/react-2.0.15.tgz#4c51196a8d991b04a171f7dd0ceab3c5998f33a4"
   integrity sha512-SxyZyyJcRv01ItVauqUZA1KcIgUjm04MJ0uhuIyZ2dBkSW5AKaxMzMGn/6tpnryMO3GySzGEpqM+kKg/Xy9PkA==
@@ -2486,7 +2486,7 @@ fraction.js@^4.2.0:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-framer-motion@^10.15.1:
+framer-motion@10.15.1:
   version "10.15.1"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.15.1.tgz#c80ba7afc90fa0d5ac2dad9a077cc1bf6e03692a"
   integrity sha512-6avJj/Uftblw0fMmo6jDHkKRH4TBdkMX/FiyR3G/hFe3hQHE4BUNJCqlMPKg9EzfI5jyqDOwO5oDnU+bW5y0eg==
@@ -3365,7 +3365,7 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-icons@^4.10.1:
+react-icons@4.10.1:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.10.1.tgz#3f3b5eec1f63c1796f6a26174a1091ca6437a500"
   integrity sha512-/ngzDP/77tlCfqthiiGNZeYFACw85fUjZtLbedmJ5DTlNDIwETxhwBzdOJ21zj4iJdvc0J3y7yOsX3PpxAJzrw==
