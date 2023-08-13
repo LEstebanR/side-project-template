@@ -22,12 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen`}>
+      <body
+        className={`${inter.className} flex flex-col bg-light dark:bg-dark min-h-screen items-center w-screen`}
+      >
         <ThemeProvider attribute="class">
           <NextUIProvider>
-            <Header />
-            <main className="flex flex-col flex-1">{children}</main>
-            <Footer />
+            <main className="flex flex-col justify-between items-center min-h-screen w-screen  p-2">
+              <Header />
+              {children}
+              <Footer />
+            </main>
           </NextUIProvider>
         </ThemeProvider>
       </body>
