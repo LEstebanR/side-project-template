@@ -21,7 +21,7 @@ const options = [
   { label: "Integrations", value: "option-3" },
 ];
 
-export default function App() {
+export function Header(): React.ReactElement {
   return (
     <Navbar className="bg-light dark:bg-dark flex items-center">
       <NavbarBrand>
@@ -31,8 +31,8 @@ export default function App() {
         className="hidden sm:flex gap-4 items-center"
         justify="center"
       >
-        {options.map((option) => (
-          <NavbarItem key={option.value}>
+        {options.map((option, index) => (
+          <NavbarItem key={index}>
             <Link color="foreground" href="#" className="dark:text-white">
               {option.label}
             </Link>
@@ -57,17 +57,23 @@ export default function App() {
           </Button>
         </NavbarItem>
         <div className="sm:hidden">
-          <Dropdown type="listbox">
+          <Dropdown>
             <DropdownTrigger>
-              <MdDensityMedium size={24} className="color-primary" />
+              <Button isIconOnly size="md" variant="bordered">
+                <MdDensityMedium
+                  size={24}
+                  className="dark:text-white text-black"
+                />
+              </Button>
             </DropdownTrigger>
             <DropdownMenu
               variant="shadow"
-              className=" dark:bg-dark dark:text-light rounded-xl"
+              className="dark:bg-dark dark:text-light rounded-xl"
+              aria-label="Dropdown menu"
             >
               <DropdownSection showDivider>
-                {options.map((option) => (
-                  <DropdownItem key={option.value}>
+                {options.map((option, index) => (
+                  <DropdownItem textValue={option.label} key={option.label}>
                     <Link
                       color="foreground"
                       href="#"
@@ -79,7 +85,7 @@ export default function App() {
                 ))}
               </DropdownSection>
               <DropdownSection>
-                <DropdownItem>
+                <DropdownItem textValue="Login button">
                   <Button
                     as={Link}
                     color="primary"
@@ -90,7 +96,7 @@ export default function App() {
                     Login
                   </Button>
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem textValue="Sign Up button">
                   <Button as={Link} color="primary" href="#" fullWidth>
                     Sign Up
                   </Button>
