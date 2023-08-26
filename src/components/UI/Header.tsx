@@ -46,7 +46,7 @@ export function Header(): React.ReactElement {
 
       <NavbarItem>
         <Switch
-          defaultSelected={systemTheme === "light" ? "light" : "dark"}
+          defaultSelected={systemTheme === "light" ? true : false}
           size="lg"
           color="secondary"
           onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
